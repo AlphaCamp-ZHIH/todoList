@@ -24,7 +24,7 @@
     <h2 class=" bg-info  rounded text-white p-3 mb-5 ">已完成</h2>
     {{#each todos}}
     <form class="row bg-light rounded no-gutters justify-content-between align-items-center p-2"
-      action="/todos/{{this._id}}?_method=DELETE">
+      action="/todos/{{this._id}}?_method=DELETE" method="POST">
       <del class="col-8">
         <h3 class="  font-italic font-weight-bold text-secondary  ml-4">{{this.name}}</h3>
       </del>
