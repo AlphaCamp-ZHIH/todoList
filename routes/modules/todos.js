@@ -43,6 +43,7 @@ router.put('/:id', (req, res) => {
         todo.save();
       } else {
         todo.name = name;
+        todo.isDone = false;
         todo.save();
       }
     }).then(() => res.redirect('/'))

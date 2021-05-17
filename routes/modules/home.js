@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
   const userId = req.user._id;
-  Todo.find(userId)
+  Todo.find({userId})
     .lean()
     .then(data => {
       const notFinished = data.filter(todo => todo.isDone === false)
