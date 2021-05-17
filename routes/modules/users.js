@@ -44,6 +44,7 @@ router.post("/register", (req, res) => {
     .lean()
     .then((user) => {
       if (user) {
+        req.flash('warning_msg','此用戶已存在')
         return res.render("register", {
           name,
           password,
